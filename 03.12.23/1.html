@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input">
+    <button onclick="b1()">Cheack Email</button>
+    <script>
+        var a=document.getElementById("input");
+        var b=/^[a-zA-Z0-9]+\@[a-z]+\.[a-z]{2,4}$/;
+        function b1(){
+            var x=a.value;
+            if (x.match(b)) {
+                alert("valid");
+            } else {
+                alert("Invalid");
+            }
+        }
+    </script>
+</body>
+</html>
