@@ -1,0 +1,66 @@
+<div class="container bg-light bg-gradient rounded pb-5 pt-5">
+    <div class="row">
+        <div class="col-3">
+           <app-dashboard></app-dashboard>
+        </div>
+        <div class="col-9">
+          <h1>Reservation details</h1>
+
+          <table class="table table-bordered border-primary">
+            <thead>
+              <tr>
+                <th scope="col" class="col-4">Booking Id</th>
+                <th scope="col">{{singleResDetails.book_id}}</th>     
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Name</td>
+                <td>{{singleResDetails.book_name}}</td>
+              </tr>
+              <tr>
+                <td>Email</td>
+                <td><a href="mailto:{{singleResDetails.book_email}}">{{singleResDetails.book_email}}</a></td>
+              </tr>
+              <tr>
+                <td>Phone</td>
+                <td><a href="tel:+88{{singleResDetails.book_phone}}">{{singleResDetails.book_phone}}</a></td>
+              </tr>
+              <tr>
+                <td>Name</td>
+                <td>{{singleResDetails.book_name}}</td>
+              </tr>
+              <tr>
+                <td>Guest number</td>
+                <td>{{singleResDetails.book_guest}}</td>
+              </tr>
+              <tr>
+                <td>Booking Date</td>
+                <td>{{singleResDetails.book_date}}</td>
+              </tr>
+              <tr>
+                <td>Schedule</td>
+                <td>{{singleResDetails.book_time}}</td>
+              </tr>
+              <tr>
+                <td>Message</td>
+                <td>{{singleResDetails.book_message}}</td>
+              </tr>
+              <tr>
+                <td>Booking Amount</td>
+                <td>{{singleResDetails.book_amount}}</td>
+              </tr>
+              <tr>
+                <td>Transaction Id</td>
+                <td>{{singleResDetails.book_tnxid}}</td>
+              </tr>
+
+
+            </tbody>
+          </table>
+        </div>
+    </div>
+  </div>
+  
+
+  

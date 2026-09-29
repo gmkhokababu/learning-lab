@@ -1,0 +1,25 @@
+
+ <table class="table stripe">
+    <tr>
+        <th>App.Id</th>
+        <th>Patient Name</th>
+        <th>Date</th>
+        <th>Phone</th>
+        <th>Problem</th>
+        <th>Department Name</th>
+        <th>Email</th>
+        <th>Doctor Id</th>
+    </tr>
+    <tr *ngFor="let i of allstudent">
+        <td>{{i.a_id}}</td>
+        <td>{{i.p_name}}</td>
+        <td>{{i.date}}</td>
+        <td>{{i.phone}}</td>
+        <td>{{i.problem}}</td>
+        <td>{{i.dept_name}}</td>
+        <td>{{i.email}}</td>
+        <td>{{i.d_id}}</td>
+    </tr>
+</table>
+
+

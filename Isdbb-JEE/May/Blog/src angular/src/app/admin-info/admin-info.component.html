@@ -1,0 +1,37 @@
+<div class="container bg-light bg-gradient rounded pb-5 pt-5">
+    <div class="row">
+        <div class="col-4">
+            <app-dashboard></app-dashboard>
+        </div>
+        <div class="col-8">
+            <h1>Search Admin</h1>
+            <form (ngSubmit)="search()">
+                <div class="row">
+                    <div class="col-8">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="emp_id" name="emp_id" [(ngModel)]="emp_id">
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <button type="submit" class="btn btn-primary w-100">Search</button>
+                    </div>
+
+
+                    <ul class="list-group">
+                        <li class="list-group-item active text-center" aria-current="true">Id: <span>{{employee.emp_id}}</span></li>
+                        <li class="list-group-item text-center">Name: <span>{{employee.emp_name}}</span></li>
+                        <li class="list-group-item text-center">Email: <span>{{employee.emp_email}}</span></li>
+                        <li class="list-group-item text-center">Password: <span>{{employee.emp_password}}</span></li>
+                        
+                      </ul>
+                  </div>
+
+                
+             
+            </form>
+        </div>
+
+        
+    </div>
+</div>
+

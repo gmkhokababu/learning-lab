@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        
+            // var temp = 0;
+            // var a = [6, 25, 4];
+            // for(var j = 0; j < a.length; j++){
+            //     for(var i = 0; i < a.length; i++){
+            //         if(a[i] > a[i +1]) {
+            //             temp = a[i];
+            //             a[i] = a [i + 1];
+            //             a[i + 1] = temp;
+            //         }
+            //     }
+            // }
+            // document.write(a);
+            // document.write("</br>");
+
+
+            var a = [6, 2 , 1, 0];
+            var temp = 0;
+            // a = [a[0+1], temp];
+            //     alert(a);
+                for(var j = 0; j < a.length; j++){
+                    for(var i = 0; i < a.length-1; i++){
+                    if(a[i] > a[i+1]){
+                        temp = a[i];
+                        a[i] = a[i+1];
+                        a[i+1] = temp;
+                        
+                    }
+                }
+                } 
+                document.write(a);
+
+                
+           
+
+            
+
+
+
+    </script>
+</body>
+</html>

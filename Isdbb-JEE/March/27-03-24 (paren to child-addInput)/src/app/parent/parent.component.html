@@ -1,0 +1,8 @@
+<p>parent value {{id}}</p>
+<p>{{anotherid}}</p>
+
+<input type="text" name="id" #z >
+<input type="button" value="Submit" (click)="m1(z.value)">
+
+
+<app-child2 [child2Id]="id" [anotherChild2]="anotherid"></app-child2>

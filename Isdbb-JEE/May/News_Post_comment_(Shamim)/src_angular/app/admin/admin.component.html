@@ -1,0 +1,27 @@
+<table class="table table-striped table-hover container mt-5">
+  <thead>
+    <tr>
+      <th scope="col">Comments Id</th>
+      <th scope="col">Blog Id</th>
+      <th scope="col">Comments</th>
+      <th scope="col">isPublishable</th>
+      <th scope="col">Publish</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let c of allComments">
+      <th scope="row"> {{c.comment_id}} </th>
+      <td>{{c.blog_id}}</td>
+      <td> {{c.comments}} </td>
+
+      <td> {{c.publish}} </td>
+      <td> <input type="checkbox" [value]="c.id" [checked]="c.publish" (change)="updateComment(c)"> </td>
+
+    </tr>
+
+
+
+  </tbody>
+</table>
+
+

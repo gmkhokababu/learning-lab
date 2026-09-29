@@ -1,0 +1,25 @@
+<div class="container">
+    <form (ngSubmit)="insert()">
+        <div class="mb-3">
+          <label for="emp_id" class="form-label">Employee Id</label>
+          <input type="text" class="form-control" id="emp_id" name="emp_id" [(ngModel)]="emp_id">
+        </div>
+
+        <div class="mb-3">
+            <label for="emp_name" class="form-label">Employee Name</label>
+            <input type="text" class="form-control" id="emp_name" name="emp_name" [(ngModel)]="emp_name">
+          </div>
+
+          <div class="mb-3">
+            <label for="emp_email" class="form-label">Employee Email</label>
+            <input type="text" class="form-control" id="emp_email" name="emp_email" [(ngModel)]="emp_email">
+          </div>
+  
+          <div class="mb-3">
+              <label for="emp_password" class="form-label">Employee Password</label>
+              <input type="text" class="form-control" id="emp_password" name="emp_password" [(ngModel)]="emp_password">
+            </div>
+
+        <button type="submit" class="btn btn-primary">Data Insert</button>
+      </form>
+</div>

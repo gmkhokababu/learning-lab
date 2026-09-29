@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci Number</title>
+</head>
+<body>
+    <script>
+        var n = parseInt(prompt("Enter Number"));
+        var arr = [];
+        var n1 = 0;
+        var n2 = 1;
+        var sum = 0;
+
+        if(n == 1){
+            arr.push(n1);
+            document.write(arr);
+        }
+        if(n == 2){
+            arr.push(n1);
+            arr.push(n2);
+            document.write(arr);
+        }
+        if(n > 2){
+            arr.push(n1);
+            arr.push(n2);
+            for(var i = 2; i < n; i++){
+                sum = n1 + n2;
+                n1 = n2;
+                n2 = sum;
+                arr.push(sum);
+            }
+            document.write(arr);
+        }
+    </script>
+</body>
+</html>
