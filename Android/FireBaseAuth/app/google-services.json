@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "423369328687",
+    "project_id": "fire-base-auth-e98c0",
+    "storage_bucket": "fire-base-auth-e98c0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:423369328687:android:3c0305678b7d049e229eda",
+        "android_client_info": {
+          "package_name": "com.abu.firebaseauth"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAzYXQOl6Hb9oZcnLRF1T8uNsKhZEIFjXM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
