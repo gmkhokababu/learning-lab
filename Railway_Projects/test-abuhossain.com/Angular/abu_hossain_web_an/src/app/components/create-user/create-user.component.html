@@ -1,0 +1,14 @@
+<div class="container">
+    <h1 style="text-align: center;">Create User</h1>
+    <form (ngSubmit)="createUser()" style="width: 500px; border: double; border-radius: 5px; padding: 5px; background-color: gray;">
+        <div class="mb-3">
+            <label for="userName" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="userName" aria-describedby="emailHelp" name="userName" [(ngModel)]="userName">
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" name="password" [(ngModel)]="password">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
