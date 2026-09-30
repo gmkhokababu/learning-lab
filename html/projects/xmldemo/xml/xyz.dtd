@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!DOCTYPE address
+[
+<!ELEMENT address (buildingnumber,street,city,state,zip)>
+<! ELEMENT buildingnumber(#PCDATA)>
+<! ELEMENT street(#PCDATA)>
+<! ELEMENT city(#PCDATA)>
+<! ELEMENT state(#PCDATA)>
+<! ELEMENT zip(#PCDATA)>
+]>
