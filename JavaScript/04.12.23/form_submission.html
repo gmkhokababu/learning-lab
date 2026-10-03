@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>From Submission</title>
+</head>
+<body>
+    <div style="text-align: center;">
+        <form>
+            <!-- Name -->
+            <div style="margin: 10px;">
+                <label for="name">Name : </label>
+                <input type="text" id="name" placeholder="Type Your Name"/>
+            </div>
+            <!-- Phone Number -->
+            <div style="margin: 10px;">
+                <label for="p_no">Phone Number : </label>
+                <input type="text" id="p_no" placeholder="Type Your Phone Number"/>
+            </div>
+            <!-- Email -->
+            <div style="margin: 10px;">
+                <label for="email">Email : </label>
+                <input type="email" id="email" placeholder="Type Your Email"/>
+            </div>
+            <!-- Password -->
+            <div style="margin: 10px;">
+                <label for="pas">Password : </label>
+                <input type="password" id="pas" placeholder="********"/>
+            </div>
+            <div style="margin: 10px;">
+                <label for="c_pas">Confurm Password : </label>
+                <input type="password" id="c_pas" placeholder="********"/>
+            </div>
+            <!-- button -->
+            <div style="margin: 10px;">
+                <input type="button" value="Submit" onclick="sub()"/>
+                <input type="button" value="Close" onclick="col()"/>
+            </div>
+            
+        </form>
+    </div>
+    <script>
+        var a=document.getElementById("name");
+        var b=document.getElementById("p_no");
+        var c=document.getElementById("email");
+        var d=document.getElementById("pas");
+        var f=document.getElementById("c_pas");
+
+
+        var w;
+        var q=/^[a-z0-9]+\@[a-z]+\.[a-z]{2,3}$/;
+        //submission function;
+        function sub(){
+            var nam=a.value;
+            var ph_no=b.value;
+            var e_mail=c.value;
+            var pass=d.value;
+            var c_pass= f.value;
+
+            if(!e_mail.match(q)){
+                alert("Invalid Email")
+            }
+            else{
+            w=window.open("","");
+            w.document.write("<textarea cols='30' rows='10'>")
+                w.document.write("Name : "+nam+"\n");
+                w.document.write("Phone Number : "+ph_no+"\n");
+                w.document.write("Email : "+e_mail+"\n");
+                w.document.write("Password : "+pass+"\n");
+                w.document.write("Confurm Password : "+c_pass+"\n");
+            w.document.write("</textarea>")
+            }
+        }
+        //email validation
+        function e(){
+            if(!c.match(q)){
+                alert("invalid email")
+            }
+        }
+        //Closing Function
+        function col(){
+            w.close();
+        }
+    </script>
+</body>
+</html>

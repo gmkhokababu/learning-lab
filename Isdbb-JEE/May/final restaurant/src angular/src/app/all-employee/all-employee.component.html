@@ -1,0 +1,31 @@
+<div class="container bg-light bg-gradient rounded pb-5 pt-5">
+    <div class="row">
+        <div class="col-3">
+            <app-dashboard></app-dashboard>
+        </div>
+        <div class="col-9">
+            <h1>All Users</h1>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Password</th>
+                        <th colspan="2" class="text-center">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let i of all_emp_details">
+                        <td>{{i.emp_id}}</td>
+                        <td>{{i.emp_name}}</td>
+                        <td>{{i.emp_email}}</td>
+                        <td>{{i.emp_password}}</td>
+                        <td><button type="button" class="btn btn-info" (click)="update(i.emp_id)">Update</button></td>
+                        <td><button type="button" class="btn btn-danger" (click)="userDelete(i.emp_id)">Delete</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

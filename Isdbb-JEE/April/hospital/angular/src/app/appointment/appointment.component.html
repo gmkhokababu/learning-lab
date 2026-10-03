@@ -1,0 +1,41 @@
+<div class="container mt-5">
+  <div class="row align-items-start">
+    <div class="col">
+
+    </div>
+    <div class="col">
+      <form>
+        <div class="mb-3">
+          <label for="p_name" class="form-label">Patient Name</label>
+          <input type="text" class="form-control" id="p_name" aria-describedby="emailHelp" name="patient_name" [(ngModel)]="patient_name">
+        </div>
+        <div class="mb-3">
+          <label for="date" class="form-label">Date</label>
+          <input type="text" class="form-control" id="date" name="date" [(ngModel)]="date">
+        </div>
+        <div class="mb-3">
+          <label for="phone" class="form-label">Phone</label>
+          <input type="number" class="form-control" id="phone" name="phone" [(ngModel)]="phone">
+        </div>
+        <div class="mb-3">
+          <label for="d_name" class="form-label">Department Name</label>
+          <input type="text" class="form-control" id="d_name" name="department_name" [(ngModel)]="department_name">
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" name="email" [(ngModel)]="email">
+        </div>
+        <div class="mb-3">
+          <label for="d_id" class="form-label">Doctor Id</label>
+          <input type="number" class="form-control" id="d_id" name="doctor_id" [(ngModel)]="doctor_id">
+        </div>
+
+
+        <button type="submit" class="btn btn-primary" (click)="save()">Submit</button>
+      </form>
+    </div>
+    <div class="col">
+
+    </div>
+  </div>
+</div>

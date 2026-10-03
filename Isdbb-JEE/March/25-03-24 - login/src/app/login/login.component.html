@@ -1,0 +1,25 @@
+<div class="container mt-5">
+    <div class="row">
+      <div class="col-sm">
+        
+      </div>
+      <div class="col-sm">
+        <form (ngSubmit)="m1()">
+          <div class="mb-3">
+            <label for="id" class="form-label">Id</label>
+            <input type="number" class="form-control" id="id" name="id" [(ngModel)]="id">
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" name="password" [(ngModel)]="password">
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+  
+       
+      </div>
+      <div class="col-sm">
+       
+      </div>
+    </div>
+  </div>

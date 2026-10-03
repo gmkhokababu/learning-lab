@@ -1,0 +1,8 @@
+CREATE TABLE student(
+	id NUMBER(6) PRIMARY KEY,
+	name VARCHAR2(25) NOT NULL,
+	gender VARCHAR(12),
+	email VARCHAR2(30) UNIQUE,
+	round NUMBER(15) DEFAULT 57,
+	salary NUMBER(15) CHECK(salary>5000)
+);

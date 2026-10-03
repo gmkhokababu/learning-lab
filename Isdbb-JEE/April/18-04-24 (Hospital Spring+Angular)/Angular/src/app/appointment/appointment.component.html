@@ -1,0 +1,45 @@
+<div class="container">
+    <form (ngSubmit)="save()">
+        <div class="mb-3">
+            <label for="a_id" class="form-label">Appointment Id</label>
+            <input type="text" class="form-control" id="a_id" name="a_id" [(ngModel)]="a_id">
+        </div>
+
+        <div class="mb-3">
+            <label for="p_name" class="form-label">Pateint Name</label>
+            <input type="text" class="form-control" id="p_name" name="p_name" [(ngModel)]="p_name">
+        </div>
+
+        <div class="mb-3">
+            <label for="date" class="form-label">Date</label>
+            <input type="text" class="form-control" id="date" name="date" [(ngModel)]="date">
+        </div>
+
+        <div class="mb-3">
+            <label for="phone" class="form-label">Phone</label>
+            <input type="text" class="form-control" id="phone" name="phone" [(ngModel)]="phone">
+        </div>
+
+        <div class="mb-3">
+            <label for="problem" class="form-label">Problem</label>
+            <input type="text" class="form-control" id="problem" name="problem" [(ngModel)]="problem">
+        </div>
+
+        <div class="mb-3">
+            <label for="dept_name" class="form-label">Department Name</label>
+            <input type="text" class="form-control" id="dept_name" name="dept_name" [(ngModel)]="dept_name">
+        </div>
+
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="text" class="form-control" id="email" name="email" [(ngModel)]="email">
+        </div>
+
+        <div class="mb-3">
+            <label for="d_id" class="form-label">Doctors Id</label>
+            <input type="text" class="form-control" id="d_id" name="d_id" [(ngModel)]="d_id">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Data Insert</button>
+    </form>
+</div>

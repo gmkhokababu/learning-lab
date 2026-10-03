@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>6 Sub Result</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                
+            </div>
+            <div class="col-8">
+                <div class="mb-3">
+                    <label for="bangla" class="form-label">Bangla</label>
+                    <input type="text" class="form-control" id="bangla" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="english" class="form-label">English</label>
+                    <input type="text" class="form-control" id="english">
+                </div>
+                <div class="mb-3">
+                    <label for="math" class="form-label">Math</label>
+                    <input type="text" class="form-control" id="math">
+                </div>
+                <div class="mb-3">
+                    <label for="ict" class="form-label">Ict</label>
+                    <input type="text" class="form-control" id="ict">
+                </div>
+                <div class="mb-3">
+                    <label for="physics" class="form-label">Physics</label>
+                    <input type="text" class="form-control" id="physics">
+                </div>
+                <div class="mb-3">
+                    <label for="chemistry" class="form-label">Chemistry</label>
+                    <input type="text" class="form-control" id="chemistry">
+                </div>
+                <div class="mb-3">
+                    <label for="result" class="form-label">Result</label>
+                    <input type="text" class="form-control" id="result" disabled>
+                </div>
+                
+                <button type="submit" class="btn btn-success" onclick="add()">Total Number</button>
+               
+                
+
+            </div>
+            <div class="col-2">
+                
+            </div>
+        </div>
+    </div>
+
+
+<script>
+var bangla = document.getElementById("bangla");
+var english = document.getElementById("english");
+var math = document.getElementById("math");
+var ict = document.getElementById("ict");
+var physics = document.getElementById("physics");
+var chemistry = document.getElementById("chemistry");
+
+function add(){
+    var banglaInt = parseInt(bangla.value);
+    var englishInt = parseInt(english.value);
+    var mathInt = parseInt(math.value);
+    var ictInt = parseInt(ict.value);
+    var physicsInt = parseInt(physics.value);
+    var chemistryInt = parseInt(chemistry.value);
+
+    // var Total = banglaInt + englishInt + mathInt + ictInt+ physicsInt + chemistryInt;
+    if(banglaInt >= 60 && englishInt >= 60 && mathInt >= 60 && ictInt >= 60 && physicsInt >= 60 && chemistryInt >= 60){
+        result.value = "Pass";
+    } else{
+        result.value = "Fail";
+    }
+    
+}
+</script>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+
+
+</body>
+
+</html>

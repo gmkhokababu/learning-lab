@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" #dd (change)="m1(dd.value)" >
+        <option selected>Open this select menu</option>
+        <option [value]="z" *ngFor="let i of products ; let z = index">{{i.id}}</option>
+        
+      </select>
+      
+      
+    </div>
+    <div class="col-md-6">
+        <img src="{{product.image}}" alt="" style="width: 200px; height: 120px;">
+        <div class="card-body">
+          <h5 class="card-title">{{product.id}}</h5>
+          <h5 class="card-title">{{product.name}}</h5>
+          <h5 class="card-title">{{product.stock}}</h5>
+          <h5 class="card-title">{{product.price}}</h5>
+
+        </div>
+    </div>
+  </div>
+
+
+
+  <div class="row">
+    <div class="card m-1" style="width: 17rem;" *ngFor="let product of products">
+      <img [src]="product.image" class="card-img-top img-thumbnail" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{product.name}}</h5>
+        <p class="card-text">{{product.stock}} in stock</p>
+        <p class="card-text">Product Id: {{product.id}} </p>
+        <p class="card-text">Price: {{product.price}}</p>
+        <a href="#" class="btn btn-primary">Buy Now</a>
+      </div>
+    </div>
+  </div>
+
+</div>

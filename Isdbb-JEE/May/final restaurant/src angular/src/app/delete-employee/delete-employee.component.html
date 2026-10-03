@@ -1,0 +1,33 @@
+<div class="container bg-light bg-gradient rounded pb-5 pt-5">
+    <div class="row">
+        <div class="col-3">
+           <app-dashboard></app-dashboard>
+        </div>
+        <div class="col-9">
+          <h1>Delete User</h1>
+          <form (ngSubmit)="userDelete()">
+            <div class="mb-3">
+              <input type="text" class="form-control" disabled id="emp_id" name="emp_id" [(ngModel)]="emp_id">
+            </div>
+    
+            <div class="mb-3">
+                
+                <input type="text" class="form-control" disabled id="emp_name" name="emp_name" [(ngModel)]="emp_name">
+              </div>
+    
+              <div class="mb-3">
+                
+                <input type="text" class="form-control" disabled id="emp_email" name="emp_email" [(ngModel)]="emp_email">
+              </div>
+      
+              <div class="mb-3">
+                  
+                  <input type="text" class="form-control" disabled id="emp_password" name="emp_password" [(ngModel)]="emp_password">
+                </div>
+    
+            <button type="submit" class="btn btn-primary">Delete</button>
+          </form>
+        </div>
+    </div>
+  </div>
+  
