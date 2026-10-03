@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Validation</title>
+</head>
+<body>
+    <input type="text" id="email">
+    <button onclick="checkEmail()">CHECK</button>
+
+    <script>
+        var getEmail = document.getElementById('email');
+        var emaiForamt = /^[a-z0-9]+\@+[a-z]+\.[a-z]{2,3}$/
+
+        function checkEmail(){
+            var emailValue = getEmail.value;
+            if(emailValue.match(emaiForamt)){
+                alert("Email is valid");
+            }else{
+                alert("Email is not valid");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="number">
+    <button  onclick="m1()">OK</button>
+
+    <script>
+        function m1(){
+            // alert("hello");
+            var x = parseInt(document.getElementById("number").value);
+            var p = 1;
+            if (x <= 1){
+                // return 1;
+                alert (p);
+            }else{
+                for (var i = 2; i <= x; i++){
+                    p = p*i;
+                }
+                alert (p);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="col"></div>
+        <div class="col">
+           
+            <label for="bangla"> Bangla: </label>
+            <input type="text" placeholder="Bangla" id="bangla"><br><br>
+
+            <label for="english"> English: </label>
+            <input type="text" placeholder="English" id="english"><br><br>
+
+            <label for="science">Science: </label>
+            <input type="text" placeholder="Science" id="science"><br><br>
+
+            <label for="ict">ICT: </label>
+            <input type="text" placeholder="ICT" id="ict"><br><br>
+
+            <label for="physics">Physics: </label>
+            <input type="text" placeholder="Physics" id="physics"><br><br>
+
+            <label for="math">Math: </label>
+            <input type="text" placeholder="Math" id="math"><br><br>
+
+            <label for="total">Total: </label>
+            <input type="text" placeholder="Total" id="total"><br><br>
+
+            <label for="avarage">Avarage: </label>
+            <input type="text" placeholder="Avarage" id="avarage"><br><br>
+
+            <label for="result">Result: </label>
+            <input type="text" placeholder="Result" id="result"><br><br>
+
+            <button onclick="add()" class="btn btn-primary">Total</button>
+            <button onclick="avg()" class="btn btn-secondary">Avarage</button>
+            <button onclick="checkPassOrFail()"class="btn btn-danger">Check Result</button>
+            
+        </div>
+        <div class="col"></div>
+    </div>
+
+    <script>
+        var bangla = document.getElementById("bangla");
+        var english = document.getElementById("english");
+        var science = document.getElementById("science");
+        var ict = document.getElementById("ict");
+        var physics = document.getElementById("physics");
+        var math = document.getElementById("math");
+        
+
+        function add() {
+            total.value = parseInt(bangla.value) + parseInt(english.value) + parseInt(science.value) + parseInt(ict.value) + parseInt(physics.value) + parseInt(math.value) ;
+        }
+
+        function avg(){
+           var sum = parseInt(bangla.value) + parseInt(english.value) + parseInt(science.value) + parseInt(ict.value) + parseInt(physics.value) + parseInt(math.value) ;
+           avarage.value = sum/6;
+        }
+
+        function checkPassOrFail(){
+            if(bangla.value >= 60 && english.value >= 60 && science.value >= 60 && ict.value >= 60 && physics.value >= 60 && math.value >= 60){
+                result.value = "Pass";
+            }else{
+                result.value = "Fail";
+            }
+        }
+       
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

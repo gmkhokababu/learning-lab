@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="factorial">
+    <button onclick="factorial()">Check Factorial</button>
+
+
+
+    <script>
+        function factorial(){
+            var number = parseInt(document.getElementById("factorial").value);
+            var p = 1;
+
+            if(number <= 1){
+                alert (p);
+            }else{
+                for(i = 2; i <= number; i++){
+                   p = p * i;
+                }
+                alert (p);
+            }
+
+        }
+    </script>
+</body>
+</html>

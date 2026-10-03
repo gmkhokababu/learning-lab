@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Number</title>
+</head>
+<body>
+    
+    <script>
+        var inputNumber = prompt("Enter Your Number");
+        var count = 0;
+        for(var i = 1; i <= inputNumber; i++){
+            if(inputNumber % i == 0){
+                count++;
+            }
+        }
+        if(count == 2){
+            alert(inputNumber + " is a prime number");
+        }else{
+            alert(inputNumber + " is not a prime number");
+        }
+    </script>
+</body>
+</html>

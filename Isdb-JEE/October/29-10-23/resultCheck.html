@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" id="examNumber"><span>&nbsp;Exam Number</span><br><br>
+        <input type="text" id="result"><span>&nbsp;Result</span><br><br>
+        <button onclick="passOrFail()">Check</button>
+    </div>
+
+
+    <script>
+        var examNumber = document.getElementById("examNumber");
+        var result = document.getElementById("result");
+        function passOrFail() {
+            // result.value = examNumber.value;
+
+            if (examNumber.value > 100) {
+                result.value = "Invalid Number";
+            } else if (examNumber.value >= 80) {
+                result.value = "A+";
+            } else if (examNumber.value >= 70) {
+                result.value = "A";
+            } else if (examNumber.value >= 60) {
+                result.value = "A-";
+            } else if (examNumber.value >= 50) {
+                result.value = "B";
+            } else if (examNumber.value >= 40) {
+                result.value = "C";
+            } else if (examNumber.value >= 33) {
+                result.value = "D";
+            }
+            else {
+                result.value = "Fail";
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Calculate</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                
+            </div>
+            <div class="col-8">
+                <div class="mb-3">
+                    <label for="numberOne" class="form-label">Number One</label>
+                    <input type="text" class="form-control" id="numberOne" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="numberTwo" class="form-label">Number Two</label>
+                    <input type="text" class="form-control" id="numberTwo">
+                </div>
+
+                <div class="mb-3">
+                    <label for="result" class="form-label">Example textarea</label>
+                    <textarea class="form-control" id="result" rows="5" disabled></textarea>
+                  </div>
+                <!-- <div class="mb-3">
+                    <label for="result" class="form-label">Result</label>
+                    <input type="text" class="form-control" id="result" disabled>
+                </div>
+                 -->
+                <button type="submit" class="btn btn-primary" onclick="add()">Add</button>
+                
+                
+
+            </div>
+            <div class="col-2">
+                
+            </div>
+        </div>
+    </div>
+
+
+<script>
+    function add(){
+        var sum = calSum();
+        var sub = calSub();
+        var multi = calmulti();
+        var div = calDiv()
+        result.value = "Summation of these two numbers is " + sum + "\n" + "Substrate of these two numbers is " + sub + "\n" + "Multiplication of these two numbers is " + multi + "\n" + "Divide of these two numbers is " + div;
+    }
+    function calSum(){
+        var numberOneInt = document.getElementById("numberOne").value;
+        var numberTwoInt = document.getElementById("numberTwo").value;
+
+        var summation = parseInt(numberOneInt) + parseInt(numberTwoInt);
+        return summation;
+    }
+
+    function calSub(){
+        var numberOneInt = document.getElementById("numberOne").value;
+        var numberTwoInt = document.getElementById("numberTwo").value;
+
+        var substrate = parseInt(numberOneInt) - parseInt(numberTwoInt);
+        return substrate;
+    }
+
+    function calmulti(){
+        var numberOneInt = document.getElementById("numberOne").value;
+        var numberTwoInt = document.getElementById("numberTwo").value;
+
+        var multiplication = parseInt(numberOneInt) * parseInt(numberTwoInt);
+        return multiplication;
+    }
+
+    function calDiv(){
+        var numberOneInt = document.getElementById("numberOne").value;
+        var numberTwoInt = document.getElementById("numberTwo").value;
+
+        var divide = parseInt(numberOneInt) / parseInt(numberTwoInt);
+        return divide;
+    }
+
+</script>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+
+
+</body>
+
+</html>

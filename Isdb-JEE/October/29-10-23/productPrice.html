@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="product1"> 
+    <label for="product1">Product 1</label><br><br>
+
+    <input type="text" name="" id="product2"> 
+    <label for="product2">Product 2</label><br><br>
+
+    <input type="text" name="" id="product3"> 
+    <label for="product3">Product 3</label><br><br>
+
+    <input type="text" name="" id="total"> 
+    <label for="total">Total</label><br><br>
+
+    <input type="text" name="" id="discount"> 
+    <label for="discount">Discount</label><br><br>
+
+    <input type="text" name="" id="net"> 
+    <label for="net">Net</label><br><br>
+    <button onclick="calculate()">Calculate</button><br><br>
+
+    
+
+
+    <script>
+        var product1 = document.getElementById("product1");
+        var product2 = document.getElementById("product2");
+        var product3 = document.getElementById("product3");
+        var discount = document.getElementById("discount");
+        var total = document.getElementById("total");
+        var net = document.getElementById("net");
+
+        var fiveParcent = 1000*5/100;
+        var tenParcent = 2000*10/100;
+        var fifteenParcent = 5000*15/100;
+
+  
+
+
+        function calculate(){
+            total.value = parseInt(product1.value) + parseInt(product2.value) + parseInt(product3.value);
+            // ============================= total end
+            if(total.value >= 5000){
+                discount.value = fifteenParcent;
+            }else if(total.value >= 2000){
+                discount.value = tenParcent;
+            }else if(total.value >= 1000){
+                discount.value = fiveParcent;
+            }else{
+                discount.value = 0;
+            }
+            // ============================= if end
+            net.value = total.value - discount.value;
+            
+        }
+
+    </script>
+</body>
+</html>

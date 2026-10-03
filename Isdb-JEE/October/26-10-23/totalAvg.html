@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="bangla">Bangla: </label>
+    <input type="text" id="bangla" name="bangla"><br><br>
+
+    <label for="english">English: </label>
+    <input type="text" id="english" name="english"><br><br>
+
+    <label for="ict">ICT </label>
+    <input type="text" id="ict" name="ict"><br><br>
+
+    <label for="math">Math </label>
+    <input type="text" id="math" name="math"><br><br>
+
+    <label for="physics">Physics: </label>
+    <input type="text" id="physics" name="physics"><br><br>
+
+    <label for="chemistry">Chemistry: </label>
+    <input type="text" id="chemistry" name="chemistry"><br><br>
+
+    <label for="result">Result: </label>
+    <input type="text" id="result" name="result"><br><br>
+
+    <button onclick="total()">Total</button>
+    <button onclick="avg()">Avarage</button>
+
+    <script>
+
+        var a = document.getElementById("bangla");
+        var b = document.getElementById("english");
+        var c = document.getElementById("ict");
+        var d = document.getElementById("math");
+        var e = document.getElementById("physics");
+        var f = document.getElementById("chemistry");
+        var t = 0;
+        var k = 0;
+       
+
+        
+
+        function total(){
+            result.value = parseInt(a.value) + parseInt(b.value) + parseInt(c.value) + parseInt(d.value) + parseInt(e.value) + parseInt(f.value);
+            
+        }
+        function avg(){
+            t = result.value = parseInt(a.value) + parseInt(b.value) + parseInt(c.value) + parseInt(d.value) + parseInt(e.value) + parseInt(f.value);
+            result.value = t/6;
+
+        }
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="field1" value=""><span>Month</span><br><br>
+    <input type="text" id="field2" value=""><span>Study Hour</span><br><br>
+    <input type="text" id="field3" value=""><span>Exercise Hour</span><br><br>
+    <input type="text" id="field4" value=""><span>Sleep Hour</span><br><br>
+    <button onclick="transfer()">Ok</button>
+
+    <script>
+        var i = document.getElementById("field1");
+        var j = document.getElementById("field2");
+        var a = document.getElementById("field3");
+        var b = document.getElementById("field4");
+
+
+        function transfer(){
+            var k = i.value;
+            j.value = parseInt(k)*30*10;
+            a.value = parseInt(k)*30*1.5;
+            b.value = parseInt(k)*30*8;
+        }
+
+    </script>
+</body>
+</html>

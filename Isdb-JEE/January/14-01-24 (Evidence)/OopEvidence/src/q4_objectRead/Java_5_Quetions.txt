@@ -1,0 +1,294 @@
+----------------------------Q1 Parent-------------------------
+
+
+package newpackage;
+
+
+public class Teacher {
+   String name; 
+}
+--------------------------------Q1_Student---------------------------------
+
+package newpackage;
+
+public class Student extends Teacher {
+    //akhane name chola ascha.
+    int id;
+    String email;
+    int round;
+    String address;
+    
+    public String showAddress(){
+      return "My address is "+ address; 
+    }
+
+    public Student() {
+    }
+
+    public Student(int id, String email, int round, String address, String name) {
+        this.id = id;
+        this.email = email;
+        this.round = round;
+        this.address = address;
+        this.name = name;
+    }
+    
+    
+}
+----------------------Q1_Test--------------------------------
+
+
+package newpackage;
+
+import java.util.ArrayList;
+
+public class Test {
+    public static void main(String[] args) {
+        Student s1= new Student(101,"1232@gmail.com",52,"mirpur","Meena");
+        Student s2= new Student(102,"1045@gmail.com",50,"Uttara","mita");
+        ArrayList<Student> list1=new ArrayList<>();
+        list1.add(s1);
+        list1.add(s2);
+        System.out.println(list1.get(1).showAddress());
+        
+    }
+  
+}
+------------------------------------------------------------------------Q1_End-------------------------------------------------------------------------
+--------------Q2Perent---------------------
+
+package Banking;
+
+public class Bank_trn {
+    public void transfer(SavingsAccount to, double amount){
+        
+    }
+    public void deposit(double amount){
+        
+    }
+    public void withdrow(double amount){
+         
+    }
+}
+
+
+
+-----------------Q2Cheild---------------------------
+package Banking;
+
+public class SavingsAccount extends Bank_trn {
+    int accNumber;
+    String accName;
+    double balance;
+      public void transfer(SavingsAccount to, double amount){
+      this.balance=this.balance-amount;
+      to.balance=to.balance+amount;
+    }
+    public void deposit(double amount){
+        this.balance=this.balance+amount;
+    }
+    public void withdrow(double amount){
+        this.balance=this.balance-amount; 
+    }
+
+    public SavingsAccount() {
+    }
+
+    public SavingsAccount(int accNumber, String accName, double balance) {
+        this.accNumber = accNumber;
+        this.accName = accName;
+        this.balance = balance;
+    }
+}
+----------------------------Q2Test-------------------------------
+
+
+package Banking;
+
+import java.util.ArrayList;
+
+
+public class Test {
+    public static void main(String[] args) {
+        SavingsAccount abu= new SavingsAccount(100200,"abu hossian",2500);
+        SavingsAccount ema= new SavingsAccount(100325,"ema",1500);
+        SavingsAccount prity= new SavingsAccount(10035,"fd",3500);
+//        System.out.println(ema.balance);
+//        ema.deposit(1000);
+//        System.out.println(ema.balance);
+//        ema.transfer(abu,500);
+//       System.out.println(abu.balance);
+//       System.out.println(ema.balance);
+//abu.deposit(500);
+        //System.out.println(abu.balance);
+        prity.transfer(abu, 100);
+        System.out.println(prity.balance);
+        System.out.println(abu.balance);
+
+        ArrayList<SavingsAccount> s1= new ArrayList<>();
+        
+        s1.add(abu);
+        s1.add(ema);
+//        s1.get(0).withdrow(400);
+//        System.out.println(abu.balance);
+        //System.out.println(s1.get(0).balance);
+    }
+}
+------------------------------------------------------------------------------------Q2_End--------------------------------------------------------------
+------------------------------Q3------------------------
+
+public class Q_3 {
+
+
+    public static void main(String [] args){
+
+
+        int [] arr = new int [5];
+
+        String s=null;
+        try{
+            System.out.println(10/0);
+
+            System.out.println(arr[5]);
+
+            System.out.println(s.length());
+
+        }catch(ArithmeticException e){
+            System.out.println(e);
+        }catch (ArrayIndexOutOfBoundsException e){
+            System.out.println(e);
+        }catch (NullPointerException n){
+            System.out.println(n.getMessage());
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+    }
+}
+-------------------------------------------------------------------Q3_End-------------------------------------------------------------------------------
+------------------Q4 SavingAcount------------------
+
+package writeread;
+
+import java.io.Serializable;
+
+public class SavingAmount implements Serializable {
+
+    String name;
+    int accNumber;
+    int Amount;
+
+    public SavingAmount() {
+    }
+
+    public SavingAmount(String name, int accNumber, int Amount) {
+        this.name = name;
+        this.accNumber = accNumber;
+        this.Amount = Amount;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAccNumber() {
+        return accNumber;
+    }
+
+    public void setAccNumber(int accNumber) {
+        this.accNumber = accNumber;
+    }
+
+    public int getAmount() {
+        return Amount;
+    }
+
+    public void setAmount(int Amount) {
+        this.Amount = Amount;
+    }
+
+}
+
+--------------------------------Teast_Q4--------------------------------------
+
+
+package writeread;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+
+public class Test {
+
+    public static void main(String[] args) {
+      File f = new File("D:\\java soft\\Parson");
+        f.mkdir();
+        File f1 = new File(f + "\\Ariful.txt");        try {
+            f1.createNewFile();
+         SavingAmount s1 = new SavingAmount("Ariful", 5001002, 60000);
+            SavingAmount s2 = new SavingAmount("Oronto", 5001003, 40000);
+           SavingAmount s3 = new SavingAmount("Raj", 5001004, 50000);
+            FileOutputStream j1 = new FileOutputStream(f1);
+           ObjectOutputStream sk = new ObjectOutputStream(j1);
+            sk.writeObject(s1);
+           sk.writeObject(s2);
+            sk.writeObject(s3);
+           sk.flush();
+            sk.close();
+           FileInputStream b1 = new FileInputStream(f1);
+           ObjectInputStream sb = new ObjectInputStream(b1);
+           SavingAmount a1 = (SavingAmount) sb.readObject();
+         SavingAmount a2 = (SavingAmount) sb.readObject();          
+        SavingAmount a3 = (SavingAmount) sb.readObject();
+           System.out.println(a1.accNumber + "\n" + a1.Amount + "\n" + a3.name);
+         sb.close();
+
+       } catch (Exception e) {
+            System.out.println(e);
+       }
+
+
+-------------------------------------------------------------------------Q4_End-------------------------------------------------------------------------
+
+--------------------Q5------------------------
+
+
+    
+    package writeread;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.PrintWriter;
+
+
+public class Q3 {
+    public static void main(String [] args){
+        try{
+            PrintWriter pw =new PrintWriter("C:\\Users\\Ariful Islam\\Desktop\\New folder (2)\\Arif.txt");
+            pw.print("Dhaka");
+            pw.flush();
+            pw.close();
+        }catch (IOException io){
+            System.out.println(io);
+        }
+        try{
+            FileReader fr =new FileReader("C:\\Users\\Ariful Islam\\Desktop\\New folder (2)\\Arif.txt");
+            BufferedReader br =new BufferedReader(fr);
+            System.out.println(br.readLine());
+            fr.close();
+        }catch (IOException  io){
+            System.out.println(io);
+        }
+    }
+}
+
+
+
+
+
