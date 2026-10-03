@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="numberOne"> Number One</label><br>
+    <input type="text" name="" id="numberOne"><br>
+
+    <label for="numberTwo"> Number Two</label><br>
+    <input type="text" name="" id="numberTwo"><br>
+
+    <label for="result"> Result </label><br>
+    <input type="text" name="" id="result" disabled><br><br>
+
+    <button onclick="add()">Add</button>
+    <button onclick="sub()">Sub</button>
+    <button onclick="multiply()">Multiply</button>
+    <button onclick="devide()">Devide</button>
+
+    <script>
+
+        function add() {
+            var numberOne = parseInt(document.getElementById("numberOne").value);
+            var numberTwo = parseInt(document.getElementById("numberTwo").value);
+            
+            result.value = numberOne + numberTwo;
+        }
+
+        function sub() {
+            var numberOne = parseInt(document.getElementById("numberOne").value);
+            var numberTwo = parseInt(document.getElementById("numberTwo").value);
+            
+            result.value = numberOne - numberTwo;
+        }
+
+        function multiply() {
+            var numberOne = parseInt(document.getElementById("numberOne").value);
+            var numberTwo = parseInt(document.getElementById("numberTwo").value);
+            
+            result.value = numberOne * numberTwo;
+        }
+
+        function devide() {
+            var numberOne = parseInt(document.getElementById("numberOne").value);
+            var numberTwo = parseInt(document.getElementById("numberTwo").value);
+            
+            result.value = numberOne / numberTwo;
+        }
+    </script>
+</body>
+
+</html>

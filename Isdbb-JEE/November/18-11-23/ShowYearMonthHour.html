@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Show Year Month Hour</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                
+            </div>
+            <div class="col-8">
+                <div class="mb-3">
+                    <label for="Textarea1" class="form-label"></label>
+                    <textarea class="form-control" id="Textarea1" rows="3"></textarea>
+                  </div>
+                
+             
+                <!-- <button type="submit" class="btn btn-danger" onclick="time()">Check Time</button> -->
+                
+
+            </div>
+            <div class="col-2">
+                
+            </div>
+        </div>
+    </div>
+
+
+<script>
+    var todaydate = new Date();
+    var thisYear = todaydate.getFullYear();
+    var thisMonth = todaydate.getMonth() + 1;
+    var nowHour = todaydate.getHours();
+
+    Textarea1.value = "This is " + thisYear + "\n" + "This month is " + thisMonth + "\n" + "The time is " + nowHour;
+    
+    
+
+
+</script>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+
+
+</body>
+
+</html>

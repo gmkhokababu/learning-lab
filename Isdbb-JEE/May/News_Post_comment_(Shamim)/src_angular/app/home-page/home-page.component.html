@@ -1,0 +1,70 @@
+<div class="container" >
+    <div class="row" >
+
+        <div class="col-md-4" *ngFor="let b of allBlog">
+            <div class="card " style="width: 18rem; height: 20rem;">
+                <img src="{{b.image}}" height="200px" width="100px" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <a class="card-title text-wrap" [routerLink]="'/blogDetails/'+b.blog_id">{{b.title}} </a>
+                  <p class="card-text text-truncate"><strong>Writer : </strong>  {{b.writer}} </p>
+                 
+                </div>
+              </div>
+        </div>
+      
+
+    </div>
+
+
+
+    <div class="">
+        <h1>Link</h1>
+        <hr>
+        <div class="row">
+            <div class="col-md-6 d-flex">
+                <div class="card" style="width:18rem">
+                    <img src="../../assets/11.jpg"  alt="">
+                </div>
+
+                <div class="text ms-2">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit, neque!
+                </div>
+            </div>
+            <div class="col-md-6 d-flex">
+                <div class="card " style="width:18rem">
+                    <img src="../../assets/11.jpg"  alt="">
+                </div>
+                <div class="text ms-2" style="justify-content: center;">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit, neque!
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-md-6 d-flex">
+                <div class="card" style="width:18rem">
+                    <img src="../../assets/11.jpg"  alt="">
+                </div>
+
+                <div class="text ms-2">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit, neque!
+                </div>
+            </div>
+            <div class="col-md-6 d-flex">
+                <div class="card " style="width:18rem">
+                    <img src="../../assets/11.jpg"  alt="">
+                </div>
+                <div class="text ms-2" style="justify-content: center;">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit, neque!
+                </div>
+
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+
+
+{{allBlog | json}}

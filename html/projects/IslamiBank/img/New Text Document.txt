@@ -1,0 +1,64 @@
+<!------footer--> 
+   <div class="text-center" style="background-color:#147120; color: #ffffff; margin-top: 50px;">
+  <div class="row container-text-center">
+    <div class="col-3" style="margin-top: 80px;" >
+      <h4 style="margin-left: 200px  ;">Focusing On</h4>
+      <ul style="margin-left: 200px; margin-top: 10px;">
+        <li>About Islamic Banking</li>
+        <li>Financial Literacy</li>
+        <li>Citizen Charter</li>
+        <li>Credit Rating Report </li>
+        <li>Green Banking Disclosure</li>
+        <li>Disclosure of Due Diligence</li>
+        <li>Disclosure on Risk Based Capital (BASEL III)</li>
+        <li>Bank Note Security Features </li>
+        <li>IBBPLC Agent Banking</li>
+        <li>National Integrity Strategy (NIS)</li>
+        <li>Notice on Bond/Sukuk</li>
+        <li> Shareholders Information </li>
+        <li> IBBPLC 4th Mudaraba Redeemable Non-convertible Subordinated Bond</li>
+        <li>Information Security Management System (ISMS) Policy Statement</li>
+      </ul>
+    </div>
+    <div class="col-3" style="margin-top: 80px;">
+      <h4 style="margin-left: 200px  ;">Quick Links</h4>
+      <ul style="margin-left: 200px; margin-top: 10px;">
+        <li>Contact Us</li>
+        <li>Internship</li>
+        <li>Complaint Management Cell</li>
+        <li>News & Events</li>
+        <li>Tender Notice</li>
+        <li>Annual Report</li>
+        <li>Favorite Links</li>
+        <li>Forms Download</li>
+        <li> Publications</li>
+        <li>Timetable of Salat</li>
+        
+      </ul>
+    </div>
+    <div class="col-3" style="margin-top: 80px;">
+      <h4 style="margin-left: 200px  ;">Quick Links</h4>
+      <ul style="margin-left: 200px; margin-top: 10px;">
+        <li>Contact Us</li>
+        <li>Internship</li>
+        <li>Complaint Management Cell</li>
+        <li>News & Events</li>
+        <li>Tender Notice</li>
+        <li>Annual Report</li>
+        <li>Favorite Links</li>
+        <li>Forms Download</li>
+        <li> Publications</li>
+        <li>Timetable of Salat</li>
+        
+      </ul>
+    </div>
+    <div class="col-3"  style="margin-top: 80px;"> 
+     <p>Islami Bank Tower
+      40, Dilkusha C/A
+      Dhaka - 1000, Bangladesh</p> 
+      Email info@islamibankbd.com
+      PABX (+88-02) 223383040, 223384816
+      Contact Center +88-02-8331090 or 16259
+    </div>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+<div class="container bg-light bg-gradient rounded pb-5 pt-5">
+    <div class="row">
+        <div class="col-4">
+            <app-dashboard></app-dashboard>
+        </div>
+        <div class="col-8">
+            <h1>Edit News</h1>
+            <form>
+                <div class="row">
+                    <div class="col-8">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="news_title" name="news_title">
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <button type="submit" class="btn btn-primary w-100">Search</button>
+                    </div>
+                  </div>
+
+                
+                
+            </form>
+            <form>
+                <div class="mb-3">
+                    <label for="news_title" class="form-label">Title</label>
+                    <input type="text" class="form-control" id="news_title" name="news_title">
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label for="news_thumbnail" class="form-label">Thumbnail</label>
+                    <input type="text" class="form-control" id="news_thumbnail" name="news_thumbnail">
+                </div>
+
+                <button type="submit" class="btn btn-primary">Update</button>
+            </form>
+        </div>
+    </div>
+</div>

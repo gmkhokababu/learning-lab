@@ -1,0 +1,56 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <img src="../../assets/10.jpg" height="400px" width="1000px" alt="">
+            <h1> {{blogByid.title}} </h1>
+            <h4 class="d-inline"> {{blogByid.publ_date}} </h4> 
+            <span> {{blogByid.writer}} </span>
+
+            <p> {{blogByid.description}} </p>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+    <div class="container ">
+        <h1>Comments</h1>
+        <form >
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Your Comments</label>
+                <input type="text" class="form-control w-75" name="comment" [(ngModel)]="myBlog" id="exampleFormControlInput1" placeholder="Comment">
+              </div>
+
+              <button type="submit" class="btn btn-success mb-3" (click)="submitComment()">submit</button>
+              
+        </form>
+    </div>
+    {{myBlog}}
+
+
+    <!-- showing all comments  -->
+
+<div class="card mb-3 container ms-2" style="width: 18rem;" *ngFor="let c of allComments">
+    
+    <div class="card-body" *ngIf="c.publish">
+      <!-- <h5 class="card-title"> {{c.comm_date}}  </h5> -->
+      <p class="card-text"> {{c.comments}} </p>
+      <p> {{c.publish}} </p>
+      {{c.blog_id}}
+
+      <div class="d-flex gap-3">
+
+        <button type="button" (click)="minusCount()"> <i class="fa-regular fa-thumbs-up"></i> </button> 
+        <p> {{Count}} </p>
+        <button type="button" (click)="plusCount()">  <i class="fa-regular fa-thumbs-down"></i> </button> 
+       
+      </div>
+    
+    </div>
+  </div>
+
+  {{allComments | json}}
+

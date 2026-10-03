@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="" id="a"><br><br>
+    <select name="cars" id="round">
+        <option value="round55">Round 55</option>
+        <option value="round56">Round 56</option>
+        <option value="round57">Round 57</option>
+        <option value="round58">Round 58</option>
+    </select><br><br>
+
+    <input type="radio" id="others" name="fav_language" value="JavaScript">
+    <label for="others">Others</label>
+    <input type="radio" id="male" name="fav_language" value="HTML">
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="fav_language" value="CSS">
+    <label for="female">Female</label><br><br>
+    
+
+
+
+
+
+    <button onclick="m1()">Show</button>
+    <button onclick="m2()">Close</button><br><br>
+    <!-- <textarea name="" id="result" cols="30" rows="10"></textarea> -->
+
+    <script>
+        var w;
+        var x = document.getElementById("a");
+        var y = document.getElementById("round");
+        var others = document.getElementById("others");
+        var male = document.getElementById("male");
+        var female = document.getElementById("female");
+
+
+        function m1() {
+            var a = x.value;
+            var b = y.value;
+            var f = "";
+
+            if (others.checked){
+                f = "Others";
+            }else if(male.checked){
+                f = "Male"
+            }else if(female.checked){
+                f = "Female"
+            }
+            
+
+
+            w = window.open("", "");
+            w.document.write('<textarea name="" id="result" cols="30" rows="10">');
+            w.document.write(a + "\n");
+            w.document.write(b + "\n");
+            w.document.write(f + "\n");
+            w.document.write("</textarea>");
+
+
+            w.document.close();
+        }
+        function m2() {
+            w.close();
+        }
+
+    </script>
+</body>
+
+</html>

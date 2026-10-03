@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM Validation</title>
+</head>
+<body>
+    <label for="">Name:</label>
+    <input type="text" id="in"><br><br>
+
+    <label for="">Gender:</label><br><br>
+    <input type="radio" name="gender" value="male" id="male">
+    <label for="">Male</label><br><br>
+    <input type="radio" name="gender" value="female" id="female">
+    <label for="">Female</label><br><br>
+    <input type="radio" name="gender" value="others" id="others">
+    <label for="">Others</label><br><br>
+    <br><br>
+    
+    <button onclick="b1()">Open</button>
+    <button onclick="b2()">Close</button>
+    <script>
+
+        var a=document.getElementById("in");
+        var male=document.getElementById("female");
+        var female=document.getElementById("male");
+        var others=document.getElementById("others");
+        var w;
+
+        function b1(){
+            var x=a.value;
+
+            var g="";
+            if (male.checked) {
+                g="Male";
+            }
+            else if (female.checked) {
+                g="Female";
+            }
+            else if (others.checked) {
+                g="Others";
+            }
+
+
+
+            w=window.open("","");
+            w.document.write("<textarea cols='30' rows='10'>")
+
+            w.document.write(x);
+            w.document.write("\n");
+            w.document.write(g);
+
+            w.document.write("</textarea>");
+
+            w.document.close();
+        }
+        function b2(){
+            w.close();
+        }
+    </script>
+</body>
+</html>

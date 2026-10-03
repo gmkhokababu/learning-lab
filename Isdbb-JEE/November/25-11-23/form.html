@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submission</title>
+</head>
+<body>
+    <input type="text" name="" id="name"><br><br>
+
+    <select name="cars" id="round">
+        <option value="round55">Round 55</option>
+        <option value="round56">Round 56</option>
+        <option value="round57">Round 57</option>
+        <option value="round58">Round 58</option>
+    </select><br><br>
+    
+    <input type="radio" id="others" name="fav_language" >
+    <label for="others">Others</label>
+    <input type="radio" id="male" name="fav_language" >
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="fav_language" >
+    <label for="female">Female</label><br><br>
+
+    <input type="checkbox" id="html" value="HTML">
+    <label for="html">Html</label><br>
+    <input type="checkbox" id="css" value="CSS">
+    <label for="css">CSS</label><br>
+    <input type="checkbox" id="javascript" value="JavaScript">
+    <label for="javascript">Javascript</label><br><br>
+
+    <button onclick="show()">Show</button>
+    <button onclick="exit()">Close</button>
+    
+    <script>
+        var w;
+        var uname = document.getElementById("name");
+        var round = document.getElementById("round");
+        var others = document.getElementById("others");
+        var male = document.getElementById("male");
+        var female = document.getElementById("female");
+        var checkboxhtml = document.getElementById("html");
+        var checkboxcss = document.getElementById("css");
+        var checkboxjs = document.getElementById("javascript");
+        var skills = [checkboxhtml, checkboxcss, checkboxjs];
+
+
+        function show(){
+            var showName = uname.value;
+            var showRound = round.value;
+            var showGender = "";
+            var showSkills = "";
+
+            if(others.checked){
+                showGender = "others";
+            } else if(male.checked){
+                showGender = "Male";
+            } else if(female.checked){
+                showGender = "Female";
+            }
+
+            // if(checkboxhtml.checked){
+            //     showCheckbox += 'HTML \n';
+            // }
+            // if(checkboxcss.checked){
+            //     showCheckbox += 'Css \n';
+            // }
+            // if(checkboxjs.checked){
+            //     showCheckbox += 'Javascript \n';
+            // }
+            for(var i = 0; i < skills.length; i++){
+                if(skills[i].checked){
+                    showSkills += skills[i].value + "\n" ;
+                }
+            }
+
+
+            w = window.open("","");
+            w.document.write('<textarea name="" id="" cols="30" rows="10">');
+            w.document.write(showName + "\n");
+            w.document.write(showRound + "\n");
+            w.document.write(showGender + "\n");
+            w.document.write(showSkills);
+            w.document.write('</textarea>');
+            w.document.close();
+        }
+        function exit(){
+            w.close();
+        }
+    </script>
+</body>
+</html>

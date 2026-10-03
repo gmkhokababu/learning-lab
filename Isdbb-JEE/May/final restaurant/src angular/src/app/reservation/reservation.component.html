@@ -1,0 +1,38 @@
+<div class="container bg-light bg-gradient rounded pb-5 pt-5">
+    <div class="row">
+        <div class="col-3">
+            <app-dashboard></app-dashboard>
+        </div>
+        <div class="col-9">
+            <h1>All Reservations</h1>
+            <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">Person</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Time</th>
+                    <th scope="col" class="text-center" colspan="2">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let i of allReservation">
+                    <th scope="row">{{i.book_id}}</th>
+                    <td>{{i.book_name}}</td>
+                    <td>{{i.book_phone}}</td>
+                    <td>{{i.book_guest}}</td>
+                    <td>{{i.book_date}}</td>
+                    <td>{{i.book_time}}</td>
+                    <td><button type="button" class="btn btn-warning">Completed</button></td>
+                    <!-- <td><button type="button" class="btn btn-outline-dark" (click)="resDetails(i.book_id)">Details</button></td> -->
+                    <td><button type="button" class="btn btn-outline-dark" [routerLink]="'/reservations-details/'+i.book_id">Details</button></td>
+                  </tr>
+                 
+                </tbody>
+              </table>
+            
+        </div>
+    </div>
+</div>
