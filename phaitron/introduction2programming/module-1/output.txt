@@ -1,3 +1,5 @@
 Integer: 10
 Char: A
 Float: 10.20
+Long Int: 12365478900
+Double: 546254.325600
