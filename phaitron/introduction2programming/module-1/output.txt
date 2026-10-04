@@ -1,0 +1,3 @@
+Integer: 10
+Char: A
+Float: 10.20
