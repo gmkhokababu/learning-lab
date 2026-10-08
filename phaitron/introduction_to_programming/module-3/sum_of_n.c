@@ -1,0 +1,16 @@
+//Author: Abu Hossain
+//Create: 07/10/2026 02:12 AM Colombo Sri Lanka
+
+#include <stdio.h>
+int main(){
+    int n;
+    scanf("%d",&n);
+    int sum=0;
+    for(int i=1;i<=n;i++){
+        sum+=i;
+        
+    }
+    printf("%d",sum);
+
+    return 0;
+}
