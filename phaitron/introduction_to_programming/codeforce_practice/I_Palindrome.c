@@ -7,8 +7,9 @@
 
 int main()
 {
+    // printf("Start");
     int n;
-    scanf("%d",n);
+    scanf("%d",&n);
     int temp=n;
     int reverse=0;
     while(temp!=0)
