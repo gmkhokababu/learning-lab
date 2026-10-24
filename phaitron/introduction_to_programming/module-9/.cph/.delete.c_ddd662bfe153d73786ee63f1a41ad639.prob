@@ -1,0 +1,1 @@
+{"name":"Local: delete","url":"d:\\AB\\learning-lab\\phaitron\\introduction_to_programming\\module-9\\delete.c","tests":[{"id":1792874857909,"input":"5\n10 20 30 40 50\n2","output":"10 20 40 50"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\AB\\learning-lab\\phaitron\\introduction_to_programming\\module-9\\delete.c","group":"local","local":true}
