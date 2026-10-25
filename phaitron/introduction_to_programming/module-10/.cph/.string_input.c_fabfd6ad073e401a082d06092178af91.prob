@@ -1,0 +1,1 @@
+{"name":"Local: string_input","url":"d:\\AB\\learning-lab\\phaitron\\introduction_to_programming\\module-10\\string_input.c","tests":[{"id":1792960928284,"input":"Hello","output":"Hello"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\AB\\learning-lab\\phaitron\\introduction_to_programming\\module-10\\string_input.c","group":"local","local":true}
