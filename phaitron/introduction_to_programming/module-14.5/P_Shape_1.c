@@ -1,0 +1,24 @@
+//https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/P
+
+//Author: Abu Hossain
+//Create: 04/11/2026 Colombo Sri Lanka
+//Last Edit: 04/11/2026 Colombo Sri Lanka
+
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    for(int i=1;i<=n;i++)
+    {
+        for(int j=n;j>=i;j--)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+    
+    
+    return 0;
+}
