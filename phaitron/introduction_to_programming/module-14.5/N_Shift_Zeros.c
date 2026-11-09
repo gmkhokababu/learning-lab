@@ -1,0 +1,42 @@
+//https://codeforces.com/group/MWSDmqGsZm/contest/223205/problem/N
+
+
+
+//Author: Abu Hossain
+//Create: 05/11/2026 01:10 PM Colombo Sri Lanka
+//Last Edit: 05/11/2026 01:10 PM Colombo Sri Lanka
+
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    int arr[n];
+    for(int i=0;i<n;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+
+    for(int i=0;i<n;i++)
+    {
+        int temp;
+        for(int j=0;j<n-1;j++)
+        {
+            if(arr[j]==0 && arr[j+1]>0)
+            {
+                temp=arr[j];
+                arr[j]=arr[j+1];
+                arr[j+1]=temp;
+            }
+        }
+    }
+
+    for(int i=0;i<n;i++)
+    {
+        printf("%d ",arr[i]);
+    }
+    
+    
+    return 0;
+}
