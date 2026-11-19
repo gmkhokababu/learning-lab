@@ -6,9 +6,9 @@
 
 #include <stdio.h>
 
-int log_2(int n)
+long long int log_2(long long int n)
 {
-    int count=0;
+    long long int count=0;
 
     if(n/2==0)
     {
@@ -22,10 +22,10 @@ int log_2(int n)
 
 int main()
 {
-    int n;
-    scanf("%d",&n);
+    long long int n;
+    scanf("%lld",&n);
 
-    printf("%d",log_2(n));
+    printf("%lld",log_2(n));
     
     
     return 0;
