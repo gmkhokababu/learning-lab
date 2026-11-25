@@ -20,14 +20,14 @@ int main()
         cin  >> arr[i];
     }
 
-    int max=INT_MIN;
+    int max_num=arr[0];
 
-    for(int i=0;i<n;i++)
+    for(int i=1;i<n;i++)
     {
-        max=max(max,arr[i]);
+        max_num=max(max_num,arr[i]);
     }
 
-    cout << max;
+    cout << max_num;
     
     
     return 0;
